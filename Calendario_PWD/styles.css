@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', Arial, sans-serif;
+    text-align: center;
+    background-color: #000000;
+    margin: 0;
+    padding: 20px;
+    color: #39ff14; /* Verde neón */
+    line-height: 1.6;
+}
+
+.calendar {
+    width: 550px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #111;
+    border-radius: 12px;
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 20px #39ff14;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calendar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px #39ff14;
+}
+
+.calendar-header {
+    margin-bottom: 20px;
+    color: #FFD700; /* Dorado neón */
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.calendar-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-btn {
+    background-color: transparent;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #FFD700;
+}
+
+.calendar-btn:hover {
+    background-color: #FFD700;
+    color: black;
+    box-shadow: 0 0 10px #FFD700;
+}
+
+#today-btn {
+    background-color: #39ff14;
+    color: black;
+    text-shadow: 0 0 5px #39ff14;
+}
+
+#today-btn:hover {
+    background-color: #2de30e;
+    box-shadow: 0 0 10px #39ff14;
+}
+
+.calendar-title {
+    font-size: 2.2em;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 0 0 10px #39ff14;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+    color: #FFD700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-shadow: 0 0 5px #FFD700;
+}
+
+.weekday {
+    padding: 5px 0;
+}
+
+#dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.day {
+    padding: 12px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #333;
+    color: #39ff14;
+    text-shadow: 0 0 5px #39ff14;
+}
+
+.day:hover {
+    background-color: #222;
+    border-color: #39ff14;
+    box-shadow: 0 0 10px #39ff14;
+}
+
+.day.disabled {
+    color: #444;
+    cursor: default;
+    text-shadow: none;
+}
+
+.day.disabled:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.day.selected {
+    background-color: #39ff14;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 15px #39ff14;
+}
+
+.day.selected:hover {
+    background-color: #2de30e;
+}
+
+.today {
+    background-color: #FFD700;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 0 10px #FFD700;
+}
+
+.today:hover {
+    background-color: #e5c100;
+}
+
+.prev-month, .next-month {
+    opacity: 0.5;
+}
+
+.event {
+    background-color: #FFD700;
+    font-weight: 600;
+    color: black;
+    position: relative;
+    box-shadow: 0 0 10px #FFD700;
+}
+
+.event:hover {
+    background-color: #e5c100;
+}
+
+.event::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: black;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.event-trabajo {
+    background-color: #2de30e;
+    color: black;
+    box-shadow: 0 0 10px #2de30e;
+}
+
+.event-trabajo::after {
+    background-color: black;
+}
+
+.event-personal {
+    background-color: #FFD700;
+    color: black;
+}
+
+.event-personal::after {
+    background-color: black;
+}
+
+.calendar-footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #ffe02e;
+    text-shadow: 0 0 5px #FFD700;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    box-shadow: 0 0 5px #FFD700;
+}
+
+@media (max-width: 400px) {
+    .calendar {
+        width: 300px;
+        padding: 15px;
+    }
+}

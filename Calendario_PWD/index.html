@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Interactivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calendar">
+        <div class="calendar-header">
+            <h1 class="calendar-title">Mi Calendario</h1>
+        </div>
+        
+        <div class="calendar-footer">
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #ff00aa;"></div>
+                    <span>Hoy</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #ff6600;"></div>
+                    <span>Trabajo</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #4447ff;"></div>
+                    <span>Personal</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-navigation">
+            <button id="prev-month" class="calendar-btn">&#8592; Anterior</button>
+            <div>
+                <span id="month">Marzo</span> 
+                <span id="year">2025</span>
+            </div>
+            <button id="next-month" class="calendar-btn">Siguiente &#8594;</button>
+        </div>
+        
+        <div id="dates" class="calendar__dates">
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
