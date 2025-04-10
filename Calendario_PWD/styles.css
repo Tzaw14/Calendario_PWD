@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
 
 body {
-    font-family: 'Orbitron', Arial, sans-serif;
+    font-family: 'Fredoka', Arial, sans-serif;
     text-align: center;
-    background-color: #000000;
+    background-color: #FFF8DC; /* Fondo color crema */
     margin: 0;
     padding: 20px;
-    color: #39ff14; /* Verde neón */
+    color: #555;
     line-height: 1.6;
 }
 
@@ -14,22 +14,23 @@ body {
     width: 550px;
     margin: 40px auto;
     padding: 35px;
-    background: #111;
-    border-radius: 12px;
-    border: 2px solid #39ff14;
-    box-shadow: 0 0 20px #39ff14;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #fff;
+    border-radius: 20px;
+    border: 4px dashed #FFB6C1; /* Rosado suave */
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .calendar:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px #39ff14;
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 182, 193, 0.6);
 }
 
 .calendar-header {
     margin-bottom: 20px;
-    color: #FFD700; /* Dorado neón */
-    text-shadow: 0 0 10px #FFD700;
+    color: #FF69B4; /* Rosa brillante */
+    font-size: 1.8em;
+    text-shadow: 0 0 5px #FFB6C1;
 }
 
 .calendar-navigation {
@@ -40,39 +41,40 @@ body {
 }
 
 .calendar-btn {
-    background-color: transparent;
-    border: 2px solid #FFD700;
-    color: #FFD700;
+    background-color: #FFDAB9;
+    border: 2px solid #FFB347;
+    color: #D2691E;
     padding: 8px 15px;
-    border-radius: 6px;
+    border-radius: 12px;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: bold;
     transition: all 0.3s ease;
-    text-shadow: 0 0 5px #FFD700;
+    box-shadow: 0 3px #fcbf49;
 }
 
 .calendar-btn:hover {
-    background-color: #FFD700;
-    color: black;
-    box-shadow: 0 0 10px #FFD700;
+    background-color: #FFB347;
+    color: white;
+    box-shadow: 0 0 10px #FFB347;
 }
 
 #today-btn {
-    background-color: #39ff14;
-    color: black;
-    text-shadow: 0 0 5px #39ff14;
+    background-color: #98FB98;
+    color: #006400;
+    font-weight: bold;
 }
 
 #today-btn:hover {
-    background-color: #2de30e;
-    box-shadow: 0 0 10px #39ff14;
+    background-color: #90EE90;
+    box-shadow: 0 0 10px #90EE90;
 }
 
 .calendar-title {
-    font-size: 2.2em;
+    font-size: 2em;
     margin: 0;
     font-weight: 700;
-    text-shadow: 0 0 10px #39ff14;
+    color: #FF69B4;
+    text-shadow: 0 0 5px #FFA07A;
 }
 
 .calendar-weekdays {
@@ -80,11 +82,11 @@ body {
     grid-template-columns: repeat(7, 1fr);
     gap: 8px;
     margin-bottom: 15px;
-    color: #FFD700;
+    color: #FF8C00;
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 0.85em;
     font-weight: 700;
-    text-shadow: 0 0 5px #FFD700;
+    text-shadow: 0 0 3px #FFA07A;
 }
 
 .weekday {
@@ -98,41 +100,38 @@ body {
 }
 
 .day {
-    padding: 12px 8px;
-    border-radius: 8px;
+    padding: 14px 10px;
+    border-radius: 50%;
     cursor: pointer;
     transition: all 0.2s ease;
-    border: 1px solid #333;
-    color: #39ff14;
-    text-shadow: 0 0 5px #39ff14;
+    background-color: #f0f8ff;
+    color: #333;
+    border: 2px solid #FFB6C1;
+    box-shadow: 0 2px #ffc0cb;
 }
 
 .day:hover {
-    background-color: #222;
-    border-color: #39ff14;
-    box-shadow: 0 0 10px #39ff14;
+    background-color: #ffe4e1;
+    box-shadow: 0 0 8px #FFB6C1;
 }
 
 .day.disabled {
-    color: #444;
+    color: #bbb;
+    background-color: #f9f9f9;
+    border-color: #ddd;
     cursor: default;
-    text-shadow: none;
 }
 
 .day.disabled:hover {
-    background-color: transparent;
-    border-color: transparent;
+    background-color: #f9f9f9;
+    box-shadow: none;
 }
 
 .day.selected {
-    background-color: #39ff14;
-    color: black;
+    background-color: #FF69B4;
+    color: white;
     font-weight: bold;
-    box-shadow: 0 0 15px #39ff14;
-}
-
-.day.selected:hover {
-    background-color: #2de30e;
+    box-shadow: 0 0 10px #FF69B4;
 }
 
 .today {
@@ -142,63 +141,59 @@ body {
     box-shadow: 0 0 10px #FFD700;
 }
 
-.today:hover {
-    background-color: #e5c100;
-}
-
-.prev-month, .next-month {
-    opacity: 0.5;
+.prev-month,
+.next-month {
+    opacity: 0.4;
 }
 
 .event {
-    background-color: #FFD700;
-    font-weight: 600;
-    color: black;
+    background-color: #87CEFA;
+    color: #000080;
+    font-weight: bold;
+    box-shadow: 0 0 10px #87CEFA;
     position: relative;
-    box-shadow: 0 0 10px #FFD700;
 }
 
 .event:hover {
-    background-color: #e5c100;
+    background-color: #00BFFF;
 }
 
 .event::after {
     content: '';
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background-color: black;
-    bottom: 4px;
+    background-color: white;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .event-trabajo {
-    background-color: #2de30e;
-    color: black;
-    box-shadow: 0 0 10px #2de30e;
+    background-color: #FFA07A;
+    color: #8B0000;
 }
 
 .event-trabajo::after {
-    background-color: black;
+    background-color: white;
 }
 
 .event-personal {
-    background-color: #FFD700;
-    color: black;
+    background-color: #DA70D6;
+    color: white;
 }
 
 .event-personal::after {
-    background-color: black;
+    background-color: white;
 }
 
 .calendar-footer {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 0.9em;
-    color: #ffe02e;
-    text-shadow: 0 0 5px #FFD700;
+    color: #FF69B4;
+    text-shadow: 0 0 3px #FFA07A;
 }
 
 .legend {
@@ -211,22 +206,23 @@ body {
 .legend-item {
     display: flex;
     align-items: center;
-    font-size: 0.8em;
-    color: #FFD700;
-    text-shadow: 0 0 5px #FFD700;
+    font-size: 0.85em;
+    color: #FF8C00;
+    text-shadow: 0 0 3px #FFA07A;
 }
 
 .legend-color {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    margin-right: 5px;
-    box-shadow: 0 0 5px #FFD700;
+    margin-right: 6px;
+    box-shadow: 0 0 4px #FFA07A;
 }
 
 @media (max-width: 400px) {
     .calendar {
-        width: 300px;
-        padding: 15px;
+        width: 90%;
+        padding: 20px;
     }
 }
+
